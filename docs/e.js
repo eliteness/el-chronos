@@ -220,12 +220,11 @@ async function sell() {
 	_id = $("nft-sel").value;
 	ve = new ethers.Contract(VENFT, VEABI, signer);
 	vm = new ethers.Contract(VENAMM,VMABI,signer);
-	vo = new ethers.Contract(VOTER, ["function attachments(uint) public view returns(uint)"], signer);
 	wrap=new ethers.Contract(WRAP,VEABI,signer);
 	alvo = await Promise.all([
 		ve.isApprovedOrOwner(VENAMM,_id),
 		ve.voted(_id),
-		vo.attachments(_id)
+		ve.attachments(_id)
 	]);
 	console.log("alvo: ",alvo);
 	if(alvo[0]==false) {
