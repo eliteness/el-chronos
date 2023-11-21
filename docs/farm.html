@@ -1,17 +1,16 @@
 <!doctype html>
 <html>
 	<meta charset="UTF-8">
-<meta name="description" content="El Chronos: veCHR Liquid Wrapper | FTM.guru">
-<meta name="keywords" content="Ftm.guru, Guru Network, Finance, Decentralized Finance,  ETH, Arbitrum, defi, Airdrop, CHR, CHR, Chronos, Solidly, ftm.guru">
-<title>El Chronos: veCHR Liquid Wrapper | FTM.guru</title>
+	<meta name="description" content="elCHR: veCHR Liquid Wrapper | FTM.guru">
+	<meta name="keywords" content="Ftm.guru, Guru Network, Finance, Decentralized Finance, Arbitrum, defi, Airdrop, CHR, Chronos.fi, veNFT, Solidly, Chronos, Fantom Opera, FTM">
+	<title>elCHR: veCHR Liquid Wrapper | FTM.guru</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="https://dexapi.chronos.exchange/tokens/elCHR.png"/>
+	<link rel="shortcut icon" href="https://ftm.guru/icons/chr.png"/>
 	<link rel="stylesheet" href="e.css"/>
 	<body>
 		<div class="partnership">
-			<h1><span>Stake_ El Chronos </span></h1>
-			<h2>Stake Your elCHR anytime to start Earning ETH</h2>
-			<br>
+			<h1><span>L2_ Farm</span></h1>
+			<h2>Stake Your elCHR/ETH LP tokens to start Earning CHR Rewards!</h2>
 		</div>
 		<div class="mechanism">
 			<div class="amount">
@@ -30,12 +29,12 @@
 				<br>
 				<div class="input-amount-els">
 					<div>
-						<img class="bigthumb" src="https://dexapi.chronos.exchange/tokens/elCHR.png" style="border-radius:25%"/>
-						<img class="bigthumb_sub" src="img/lock.svg" style="opacity: 0;">
+						<img class="bigthumb" src="https://ftm.guru/icons/chr.png" style="border-radius:25%;clip-path: inset(0px 0px 36px 0px);">
+						<img style="position: relative;margin-left: -83px;clip-path: inset(42px 0px 0px 0px);background: #fff;border-radius: 40px;margin-right: 36px;height: 80px;" class="bigthumb" src="https://ftm.guru/icons/eth.svg">
 					</div>
 					<div class="nft-amt-nums">
 						<div class="nft-amtl-desc">
-							Stake <b>elCHR</b>
+							Stake <b>LP</b>
 						</div>
 						<input class="light-in in-box" placeholder="Enter Amount" style="margin: 0;" id="in_d">
 						<!--<button class="btn-max" onclick='$("in_d").value=$("bal_lp").textContent'>Max</button>-->
@@ -44,7 +43,7 @@
 					</div>
 				</div>
 				<div style="margin-top: -25px;" align="center">
-					<button class="submit equal-gradient" onclick="deposit(false)"><span id="claim-offer">Stake elCHR</span></button>
+					<button class="submit equal-gradient" onclick="deposit(false)"><span id="claim-offer">Stake LP</span></button>
 					<button class="submit equal-gradient btn-max" onclick="deposit(true)"><span id="claim-offer">Deposit Max</span></button>
 				</div>
 				<span class="nft-amtl" id="nft-tl"></span>
@@ -53,11 +52,11 @@
 				<div class="input-amount-els">
 					<div>
 						<img class="bigthumb" src="img/bank.svg"/>
-						<img class="bigthumb_sup" src="img/elchr.png" style="opacity: 0;">
+						<img class="bigthumb_sup" src="https://ftm.guru/icons/chr.png" style="opacity: 0;">
 					</div>
 					<div class="nft-amt-nums">
 						<div class="nft-amtl-desc">
-							Withdraw <b>elCHR</b>
+							Withdraw <b>LP</b>
 						</div>
 						<input class="light-in in-box" placeholder="Enter Amount" style="margin: 0;" id="in_w">
 						<span style="font-family: light_italic;">Staked: </span>
@@ -65,45 +64,62 @@
 					</div>
 				</div>
 				<div style="margin-top: -25px;" align="center">
-					<button class="submit equal-gradient" onclick="withdraw(false)"><span id="claim-offer">Withdraw elCHR</span></button>
+					<button class="submit equal-gradient" onclick="withdraw(false)"><span id="claim-offer">Withdraw LP</span></button>
 					<button class="submit equal-gradient btn-max" onclick="withdraw(true)"><span id="claim-offer">Unstake Max</span></button>
 				</div>
 				<br>
 				<span class="nft-amtl" id="nft-tl"></span>
 				<br><br>
-				<div class="hr-nft"></div>
-				<br><br><br>
-				<div class="earn-stats">
-					<div class="nft-amtl-desc">
-						$<span style="font-family: light_italic;" id="bal_tvl">???.???</span>
-						<br><b>T.V.L.</b>
-					</div>
-					<div class="nft-amtl-desc">
-						<span style="font-family: light_italic;" id="bal_apr">???.???</span>%
-						<br><b>A.P.R.</b>
-					</div>
-				</div>
-				<br><br><br>
 				<div class="input-amount-els">
 					<div>
-						<img class="bigthumb" src="https://ftm.guru/icons/eth.svg"/>
-						<img class="bigthumb_sup" src="img/elchr.png" style="opacity: 0;">
+						<img class="bigthumb" src="https://ftm.guru/icons/chr.png"/>
+						<img class="bigthumb_sup" src="img/chr.png" style="opacity: 0;">
 					</div>
 					<div class="nft-amt-nums">
-						<span class="light-in" style="margin: 0;">Total Earnings</span>
+						<span class="light-in" style="margin: 0;">Claimable Earnings:</span>
 						<br>
 						<div class="nft-amtl-desc">
-							<span style="font-family: light_italic;" id="bal_tr0">???.???</span>
-							<b>ETH</b>
+							<span style="font-family: light_italic;" id="bal_r0">???.???</span>
+							<b>CHR</b>
 						</div>
-						<span style="font-family: light_italic;">Unclaimed: </span>
-						<span style="font-family: " id="bal_r0">??????</span>
+						<span style="font-family: light_italic;">Total Earnings:</span>
+						<span style="font-family: " id="bal_tr0">??????</span> CHR
+						<button class="submit equal-gradient" onclick="claim()" style="margin-top: 10px;min-width:100%">
+							<span id="claim-offer">Claim All Rewards</span>
+						</button>
 					</div>
 				</div>
-				<div style="margin-top: -25px;" align="center">
-					<button class="submit equal-gradient" onclick="claim()"><span id="claim-offer">Claim All Rewards</span></button>
-				</div>
+
 				<br><br>
+
+
+				<div class="hr-nft"></div>
+				<br><br>
+				<div class="earn-stats" style="font-size:1.25em">
+
+					<div class="nft-amtl-desc earn-stats-key"><span style="font-family: light_italic;">T.V.L. of elCHR/ETH LP</span></div>
+					<div class="nft-amtl-desc earn-stats-val">$<b id="bal_tvl">?</b><br><br></div>
+
+					<div class="nft-amtl-desc earn-stats-key"><span style="font-family: light_italic;">Claimable CHR Rewards A.P.R.</span></div>
+					<div class="nft-amtl-desc earn-stats-val"><b id="bal_apr">?</b>%</div>
+
+					<!--
+
+					<div class="nft-amtl-desc earn-stats-key"><span style="font-family: light_italic;">Autocompounding Rebase A.P.R.</span></div>
+					<div class="nft-amtl-desc earn-stats-val"><b id="bal_reb_apr">?</b>%</div>
+
+					<div class="nft-amtl-desc earn-stats-key"><span style="font-family: light_italic;">Total elCHR Staking Yield</span></div>
+					<div class="nft-amtl-desc earn-stats-val"><b id="bal_tot_apr">?</b>%<br><br></div>
+
+					<div class="nft-amtl-desc earn-stats-key"><span style="font-family: light_italic;">Splitting Potential per elCHR</span></div>
+					<div class="nft-amtl-desc earn-stats-val"><b id="mintrate">?</b> veCHR</div>
+
+					-->
+
+				</div>
+
+				<br><br>
+
 			</div>
 			<!--
 			<div style="margin-top: -25px;" align="center">
@@ -113,9 +129,9 @@
 		</div>
 		<div class="analytics">
 			<a href="./">Mint</a>
-			<a class="equal-gradient-white">Stake</a>
-			<a href="./farm">L2 Farm</a>
-			<a href="https://chronos.exchange/liquidity/manage/0x176791a1afc80d201d4d0a5a9a66bbe726f83ee3" target="_blank">L1 Gauge</a>
+			<a href="./staking">Stake</a>
+			<a class="equal-gradient-white">L2 Farm</a>
+			<a href="https://chronos.exchange/liquidity/manage/0x176791a1afc80d201d4d0a5a9a66bbe726f83ee3" target="_blank">CHR Gauge</a>
 			<br><br>
 			<a href="https://chronos.exchange/swap" target="_blank">Trade</a>
 			<a href="https://dune.com/eliteness" target="_blank">Analytics</a>
@@ -155,11 +171,11 @@
 			 • <span>elCHR Price: $Unknown (Unknown CHR)</span>
 			 • <span>elCHR Minting Ratio (veCHR): 1.Unknown</span>
 			 • <span>Market Cap: $Unknown</span>
-			 • <span>Total Supply: 20,000+</span>
-			 • <span>veCHR Controlled: 28,228+</span>
+			 • <span>Total Supply: 200,000+</span>
+			 • <span>veCHR Controlled: 228,228+</span>
 			 • <span>Collateralization: Unknown%</span>
 			 • <span>elCHR/WETH Liquidity: $Unknown</span>
-			 • <span>elCHR-Staking (Earn WTH) APR: Unknown%</span>
+			 • <span>elCHR-Staking (Earn ETH) APR: Unknown%</span>
 			 • <span>elCHR/WETH-Farming (Earn CHR) APR: Unknown%</span>
 		<div>
 	<div>
@@ -195,34 +211,24 @@
 			<script src="https://ftm.guru/chart.min.js" type="application/javascript"></script>
 			<script src="https://ftm.guru/chartjs-adapter-date-fns.bundle.min.js" type="application/javascript"></script>
 			-->
-			<script src="s2.js"></script>
+			<script src="f.js"></script>
 			<script>
-				CHAINID = 42161;
-				RPC_URL = "https://arb1.arbitrum.io/rpc";
+				CHAINID = 0xa4b1;
+				RPC_URL = "https://rpc.ankr.com/arbitrum";
 				EXPLORE = "https://arbiscan.io";
 				CHAIN_NAME = "Arbitrum One";
 				CHAIN_GAS = "ETH";
-				VENFT = "0x9a01857f33aa382b1d5bb96c3180347862432b0d";
-				VENAME = "veCHR";
-				VENAMM = "0x311a3C86CC6A17a4701059139224aA5863f30960";
-				POOLID = "v0.1.0";
-
-				BASENAME = "CHR";
+				WRAP = "0x176791a1afc80d201d4d0a5a9a66bbe726f83ee3";
+				WRAPNAME = "LP-elCHR/WETH";
 				BASELOGO = "https://ftm.guru/icons/chr.png";
-				BASE = "0x15b2fb8f08e4ac1ce019eadae02ee92aedf06851";
-
-				WRAPNAME = "elCHR";
-				WRAPLOGO = "https://dexapi.chronos.exchange/tokens/elCHR.png";
-				WRAP = "0xd600ec98cf6418c50ee051ace53219d95aeaa134";
-
-				ID = 6090;
-				VOTER = "0xc72b5c6d2c33063e89a50b2f77c99193ae6cee6c";
-
-				FARM = "0xCC835D13543CEC819AC0226Dd9Ff35b6312b8FCa";
-				FARMOLD = "";
-				TEARNED = ["0x82af49447d8a07e3bd95bd0d56f35241523fbab1"];
-				TEARNSYM = ["WETH"];
-				TEARNIMG = ["https://ftm.guru/icons/eth.svg"]
+				TOKENNAME = "CHR";
+				TOKEN = "0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11";
+				TOKENLOGO = "https://ftm.guru/icons/chr.png";
+				WRAPLOGO = "https://ftm.guru/icons/chr.png";
+				FARM = "0x64532eb2e28b0d0b56b5cba35c0a88fa06285d08";
+				TEARNED = ["0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11"];
+				TEARNSYM = ["CHR"];
+				TEARNIMG = ["https://ftm.guru/icons/chr.png"]
 			</script>
 	</body>
 </html>
